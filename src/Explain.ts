@@ -9,7 +9,7 @@ const str = "\
 In 2XXX, the year of the tiger,\n\
 the Earth was on the verge of being\n\
 destroyed by a mysterious\n\
-tiger-shaped space creature ...\
+tiger-shaped outer-space creature ...\
 "
 const INTERVAL = 3
 export class Explain extends Scene {
