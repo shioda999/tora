@@ -61,7 +61,7 @@ export class GameOver {
         else if (this.count == 120) {
             this.item_manager = new ItemManager(WIDTH / 2, HEIGHT * 0.7, WIDTH / 3, HEIGHT / 10, this.container,
                 this.decide, undefined)
-            this.item_manager.appendItem("Title", HEIGHT / 10, [0xffffff, 0xcccccc, 0x555555])
+            this.item_manager.appendItem("Continue", HEIGHT / 13, [0xffffff, 0xcccccc, 0x555555])
 
             if (GlobalParam.highScore < GlobalParam.data.score) {
                 GlobalParam.highScore = GlobalParam.data.score

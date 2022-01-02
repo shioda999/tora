@@ -137,7 +137,7 @@ export class Game extends Scene {
             }
             else {
                 this.exitCurrentScene()
-                this.gotoScene("title")
+                this.gotoScene("game")
             }
         })
     }

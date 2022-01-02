@@ -41,7 +41,7 @@ export class Explain extends Scene {
             lineHeight: 50
 		})
 
-		this.next = new PIXI.Text("Click to Next", new PIXI.TextStyle({
+		this.next = new PIXI.Text("Click Here", new PIXI.TextStyle({
 			fontFamily: "Arial",
 			fontWeight: "normal",
 			fontSize: fontsize,
