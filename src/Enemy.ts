@@ -18,6 +18,7 @@ enum state{
     LASER,
     FALL
 }
+const HP_BAR_RATIO = 0.6
 export class Enemy {
     public static create_shot
     public static create_laser
@@ -36,8 +37,18 @@ export class Enemy {
     private damage_cnt: number = 0
     private state: number = state.INIT
     private laser_data = {x:0, y:0, angle: 0}
+    private hp_bar: PIXI.Graphics
     constructor(private ground: Ground, public type="toge") {
         let z = -2
+        let graph = GraphicManager.GetInstance()
+        this.sprite = graph.GetSprite(this.type)
+
+        let container = Screen.init().getContainer()
+        container.addChild(this.sprite)
+        this.sprite.anchor.set(0.5)
+        this.sprite.position.set(this.x, this.y)
+        this.sprite.zIndex = z
+        this.radius = this.sprite.height / 2
         switch(this.type){
         case "toge":
         case "tank":
@@ -62,17 +73,12 @@ export class Enemy {
             if(this.type == "warship")this.hp = 400
             this.y = HEIGHT * 0.4
             this.x = WIDTH * 2
+            this.hp_bar = new PIXI.Graphics()
+            this.hp_bar.position.set(-this.sprite.width * HP_BAR_RATIO / 2, this.sprite.height / 2)
+            this.hp_bar.zIndex = 100
+            this.sprite.addChild(this.hp_bar)
             break
         }
-        let graph = GraphicManager.GetInstance()
-        this.sprite = graph.GetSprite(this.type)
-
-        let container = Screen.init().getContainer()
-        container.addChild(this.sprite)
-        this.sprite.anchor.set(0.5)
-        this.sprite.position.set(this.x, this.y)
-        this.sprite.zIndex = z
-        this.radius = this.sprite.height / 2
     }
     public update() {
         if(!this.flag || this.sprite == null)return
@@ -127,9 +133,11 @@ export class Enemy {
             break
         case "warship":
             this.move_warship()
+            this.update_hpbar(this.hp / 300)
             break
         case "boss":
             this.move_boss()
+            this.update_hpbar((this.hp - 80) / 220)
             break
         }
         if(this.sprite == null)return
@@ -176,6 +184,11 @@ export class Enemy {
     public release() {
         let container = Screen.init().getContainer()
         this.flag = false
+        if(this.hp_bar){
+            this.sprite.removeChild(this.hp_bar)
+            this.hp_bar.destroy()
+            this.hp_bar = null
+        }
         container.removeChild(this.sprite)
         this.sprite.destroy()
         this.sprite = null
@@ -183,6 +196,17 @@ export class Enemy {
         if(this.type == "warship" || this.type == "boss"){
             FLAGS.defeat_boss = true
         }
+    }
+    private update_hpbar(rate){
+        let color = 0x00ff00
+        if(rate < 0.55)color = 0xcccc00
+        if(rate < 0.3)color = 0xff0000
+        this.hp_bar.clear()
+        this.hp_bar.lineStyle(0)
+        this.hp_bar.beginFill(color)
+        const W = this.sprite.width * HP_BAR_RATIO
+        this.hp_bar.drawRect((1 - rate) * W, 0, rate * W, 2)
+        this.hp_bar.endFill()
     }
     private move_warship(){
         this.x += SPEED

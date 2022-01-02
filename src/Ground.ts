@@ -85,8 +85,8 @@ export class Ground {
         let enemy_list = []
         if(this.state == BOSS){
             if(this.make_boss){
-                if(this.level == 5)enemy_list.push("warship")
-                if(this.level == 10)enemy_list.push("boss")
+                if(this.level <= 5)enemy_list.push("warship")
+                else enemy_list.push("boss")
                 this.make_boss = false
             }
             return enemy_list
