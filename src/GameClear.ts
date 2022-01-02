@@ -13,6 +13,7 @@ export class GameClear extends Scene {
 	private text: PIXI.Text
 	constructor(container: PIXI.Container) {
 		super()
+		this.key = Key.GetInstance()
 		this.release = () => {
 			clearInterval(this.loopID)
 		}
