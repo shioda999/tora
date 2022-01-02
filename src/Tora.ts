@@ -7,6 +7,7 @@ import { GraphicManager } from './GraphicManager'
 import { Ground } from "./Ground";
 import { Sound } from "./Sound";
 import { Shot } from "./Shot";
+import { Effect } from "./Effect";
 const style = new PIXI.TextStyle({
     fill: [
         "#d6d6d6",
@@ -33,6 +34,8 @@ export class Tora {
     private prev_key_state: boolean = false
     private cnt: number = 0
     private container
+    private dying_cnt:number = 0
+    public death: boolean = false
     constructor(private ground, private create_shot) {
         this.key = Key.GetInstance()
 
@@ -54,6 +57,7 @@ export class Tora {
         return Math.sqrt(dy*dy+dx*dx)
     }
     public update() {
+        if(this.sprite == null)return
         const mouse = Screen.init().app.renderer.plugins.interaction.mouse.getLocalPosition(this.container);
         const angle = Math.atan2(mouse.y - this.y + this.sprite.height * 0.3,mouse.x - this.x)
         const r = Math.min(this.distance(mouse.y - this.y + this.sprite.height * 0.3,mouse.x - this.x), 10)
@@ -81,6 +85,14 @@ export class Tora {
         }
         this.x = Math.min(WIDTH, Math.max(0, this.x))
         this.y = Math.min(HEIGHT, Math.max(20, this.y))
+        if(this.x == 0 && this.y > this.ground.get_groundHeight(this.x)){
+            this.dying_cnt++
+            if(this.dying_cnt > 20){
+                this.death = true
+                new Effect(this.x, this.y - 10, "explosion", 1)
+            }
+        }
+        else this.dying_cnt = 0
         this.sprite.position.set(this.x, this.y - this.sprite.height / 2)
 
         if (this.prev_key_state == false && this.key.IsPress_Now("decide")) {

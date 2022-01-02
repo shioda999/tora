@@ -75,7 +75,7 @@ export class Enemy {
         this.radius = this.sprite.height / 2
     }
     public update() {
-        if(!this.flag)return
+        if(!this.flag || this.sprite == null)return
         this.x -= SPEED
         switch(this.type){
         case "ufo":
@@ -136,7 +136,7 @@ export class Enemy {
             this.sprite.position.set(this.x, this.y)
         else
             this.sprite.position.set(this.x, this.y - this.sprite.height / 2)
-        if (this.x < -SPEED * 3) this.flag = false, this.release()
+        if (this.x < -SPEED * 3) this.release()
         if (this.damage_cnt > 0){
             this.damage_cnt--
             this.sprite.tint=0xffaaaa
@@ -164,7 +164,6 @@ export class Enemy {
             }
         })
         if(this.hp <= 0){
-            this.flag = false
             this.release()
             let large = 1.0
             if(this.type == "base")large = 2.0
@@ -175,6 +174,7 @@ export class Enemy {
     }
     public release() {
         let container = Screen.init().getContainer()
+        this.flag = false
         container.removeChild(this.sprite)
         this.sprite.destroy()
         this.sprite = null
@@ -379,7 +379,6 @@ export class Enemy {
                                 Enemy.create_shot(this.x, this.y - 10, speed, angle)
                         }
                         this.release()
-                        this.flag = false
                         new Effect(this.x, this.y, "explosion", 6)
                     }
                 }

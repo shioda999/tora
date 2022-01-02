@@ -105,6 +105,7 @@ export class Game extends Scene {
         this.enemy_laser.forEach(n => {
             if (n.collision(px, py - 10, 0)) flag = true
         })
+        if(this.Tora.death)flag = true
         return flag
     }
     private shot_check_collision(){
