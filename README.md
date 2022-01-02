@@ -1,4 +1,4 @@
-# ushi
+# tora
 ミニゲームです。
-https://shioda999.github.io/ushi/
+https://shioda999.github.io/tora/
 で遊べます。
