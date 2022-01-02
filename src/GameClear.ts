@@ -1,6 +1,6 @@
 import * as PIXI from "pixi.js"
 import { Scene } from './Scene';
-import { WIDTH, HEIGHT, GlobalParam, load } from './global'
+import { WIDTH, HEIGHT, GlobalParam, load, save } from './global'
 import { Key } from './key'
 import { ItemManager } from './ItemManager';
 import { Sound } from './Sound';
@@ -51,6 +51,10 @@ export class GameClear extends Scene {
 			strokeThickness: 17,
 			textBaseline: "middle"
 		});
+		if (GlobalParam.highScore < GlobalParam.data.score) {
+			GlobalParam.highScore = GlobalParam.data.score
+		}
+		save()
 		this.text = new PIXI.Text("Game Clear!!!", style)
 		this.text.position.set(WIDTH / 2, HEIGHT / 5)
 		this.text.anchor.set(0.5, 0.5)
