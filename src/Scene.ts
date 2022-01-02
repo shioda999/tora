@@ -1,6 +1,6 @@
 import {ItemManager} from "./ItemManager"
 import {WIDTH, HEIGHT} from './global'
-export type SceneType = "title" | "levelSelect" | "stageSelect" |"game" | "back" | "make_stage" | "scoreBoard" | "upgrade" | "explain"
+export type SceneType = "title" | "levelSelect" | "stageSelect" |"game" | "back" | "make_stage" | "clear" | "upgrade" | "explain"
 export class Scene {
     private static func: (v: SceneType) => any
     private static func2: () => any

@@ -152,7 +152,7 @@ export class Game extends Scene {
             return
         }
         if (this.time % 10 == 0) this.AddScore(1)
-        if(FLAGS.game_clear == true)this.gotoScene("scoreBoard")
+        if(FLAGS.game_clear == true)this.gotoScene("clear")
         this.key.RenewKeyData()
         //this.background.update()
         this.obj_update()

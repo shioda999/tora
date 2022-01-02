@@ -132,6 +132,7 @@ export class Enemy {
             this.move_boss()
             break
         }
+        if(this.sprite == null)return
         if(this.type == "warship")
             this.sprite.position.set(this.x, this.y)
         else
