@@ -202,6 +202,7 @@ export class Enemy {
         if(rate < 0.55)color = 0xcccc00
         if(rate < 0.3)color = 0xff0000
         this.hp_bar.clear()
+        if(rate <= 0)return
         this.hp_bar.lineStyle(0)
         this.hp_bar.beginFill(color)
         const W = this.sprite.width * HP_BAR_RATIO
