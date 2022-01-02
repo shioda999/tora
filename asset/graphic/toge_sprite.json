@@ -1,0 +1,18 @@
+{
+	"frames": {
+		"toge_0.png":
+		{
+			"frame": {"x": 0, "y": 0, "w": 32, "h": 32},
+			"rotated": false,
+			"trimmed": true,
+			"spriteSourceSize": {"x": 0, "y": 0, "w": 32, "h": 32},
+			"sourceSize": {"w": 32, "h": 32}
+		}
+	},
+	"meta": {
+		"image": "toge.png",
+		"format": "RGBA8888",
+		"size": {"w":32,"h":32},
+		"scale": "1"
+	}
+}

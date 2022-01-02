@@ -1,0 +1,18 @@
+{
+    "./asset\\graphic\\base_sprite.json": 1,
+    "./asset\\graphic\\boss_sprite.json": 1,
+    "./asset\\graphic\\clear_sprite.json": 1,
+    "./asset\\graphic\\coin1_sprite.json": 1,
+    "./asset\\graphic\\earth_sprite.json": 1,
+    "./asset\\graphic\\enemy_shot_sprite.json": 1,
+    "./asset\\graphic\\explosion_sprite.json": 8,
+    "./asset\\graphic\\helicopter_sprite.json": 1,
+    "./asset\\graphic\\plane_sprite.json": 1,
+    "./asset\\graphic\\tank_sprite.json": 1,
+    "./asset\\graphic\\tiger_shot_sprite.json": 3,
+    "./asset\\graphic\\toge_sprite.json": 1,
+    "./asset\\graphic\\tora_sprite.json": 1,
+    "./asset\\graphic\\ufo_sprite.json": 1,
+    "./asset\\graphic\\ushi_sprite.json": 1,
+    "./asset\\graphic\\warship_sprite.json": 1
+}

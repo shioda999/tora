@@ -1,0 +1,173 @@
+{
+    "frames": {
+        "explosion_0.png": {
+            "frame": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_1.png": {
+            "frame": {
+                "x": 120.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_2.png": {
+            "frame": {
+                "x": 240.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_3.png": {
+            "frame": {
+                "x": 360.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_4.png": {
+            "frame": {
+                "x": 480.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_5.png": {
+            "frame": {
+                "x": 600.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_6.png": {
+            "frame": {
+                "x": 720.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        },
+        "explosion_7.png": {
+            "frame": {
+                "x": 840.0,
+                "y": 0.0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 120.0,
+                "h": 120.0
+            },
+            "sourceSize": {
+                "w": 120.0,
+                "h": 120.0
+            }
+        }
+    },
+    "meta": {
+        "image": "explosion.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 960,
+            "h": 120
+        },
+        "scale": "1.0"
+    }
+}

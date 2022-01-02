@@ -1,0 +1,33 @@
+{
+    "frames": {
+        "base_0.png": {
+            "frame": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 147.0,
+                "h": 115.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 147.0,
+                "h": 115.0
+            },
+            "sourceSize": {
+                "w": 147.0,
+                "h": 115.0
+            }
+        }
+    },
+    "meta": {
+        "image": "base.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 147,
+            "h": 115
+        },
+        "scale": "1.3"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "frames": {
+        "earth_0.png": {
+            "frame": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 64.0,
+                "h": 64.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 64.0,
+                "h": 64.0
+            },
+            "sourceSize": {
+                "w": 64.0,
+                "h": 64.0
+            }
+        }
+    },
+    "meta": {
+        "image": "earth.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 64,
+            "h": 64
+        },
+        "scale": "1.0"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "frames": {
+        "tiger_shot_0.png": {
+            "frame": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "sourceSize": {
+                "w": 72.0,
+                "h": 72.0
+            }
+        },
+        "tiger_shot_1.png": {
+            "frame": {
+                "x": 72.0,
+                "y": 0.0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "sourceSize": {
+                "w": 72.0,
+                "h": 72.0
+            }
+        },
+        "tiger_shot_2.png": {
+            "frame": {
+                "x": 144.0,
+                "y": 0.0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 72.0,
+                "h": 72.0
+            },
+            "sourceSize": {
+                "w": 72.0,
+                "h": 72.0
+            }
+        }
+    },
+    "meta": {
+        "image": "tiger_shot.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 216,
+            "h": 72
+        },
+        "scale": "2.0"
+    }
+}
