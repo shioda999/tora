@@ -38,7 +38,7 @@ export namespace LOADED {
     let _g_callback
     export function add_loaded_count(id) {
         _g_loaded_count++
-        console.log(id, _g_loaded_count)
+        //console.log(id, _g_loaded_count)
         if (_g_callback) _g_callback()
     }
     export function get_loaded_count() {
