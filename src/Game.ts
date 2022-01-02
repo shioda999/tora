@@ -152,7 +152,11 @@ export class Game extends Scene {
             return
         }
         if (this.time % 10 == 0) this.AddScore(1)
-        if(FLAGS.game_clear == true)this.gotoScene("clear")
+        if(FLAGS.game_clear == true){
+            GlobalParam.data.score = this.score
+            FLAGS.game_clear = false
+            this.gotoScene("clear")
+        }
         this.key.RenewKeyData()
         //this.background.update()
         this.obj_update()
