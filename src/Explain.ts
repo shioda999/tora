@@ -11,7 +11,10 @@ the Earth was on the verge of being\n\
 destroyed by a mysterious\n\
 tiger-shaped outer-space creature ...\
 "
-const INTERVAL = 3
+const INTERVAL = {
+    ',': 3,
+    '\n': 1,
+}
 export class Explain extends Scene {
 	private loopID: any
 	private text: PIXI.Text
@@ -19,7 +22,7 @@ export class Explain extends Scene {
     private style
     private pos: number = 0
     private cnt: number = 0
-    private interval: number = INTERVAL
+    private interval: number = 0
 	constructor(private container: PIXI.Container) {
 		super()
 		this.release = () => {
@@ -66,10 +69,10 @@ export class Explain extends Scene {
     }
 	private loop() {
         if(this.pos < str.length){
-            if(this.pos >= 1 && str[this.pos - 1] == ','){
-                if(this.interval == 0)this.interval = INTERVAL
+            if(this.pos >= 1 && INTERVAL[str[this.pos - 1]] != undefined){
+                if(this.interval == INTERVAL[str[this.pos - 1]])this.interval = 0
                 else {
-                    this.interval--
+                    this.interval++
                     return
                 }
             }
